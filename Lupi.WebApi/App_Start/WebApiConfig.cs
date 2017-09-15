@@ -1,4 +1,5 @@
 ﻿using Lupi.BusinessLogic;
+using Lupi.DependencyResolver;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ namespace Lupi.WebApi
         {
             // Web API configuration and services
             var container = new UnityContainer();
-            container.RegisterType<IBreedBusinessLogic, BreedBusinessLogic>(new HierarchicalLifetimeManager());
+            //container.RegisterType<IBreedBusinessLogic, BreedBusinessLogic>(new HierarchicalLifetimeManager());
+            ComponentLoader.LoadContainer(container, ".\\bin", "Lupi.*.dll");
             config.DependencyResolver = new UnityResolver(container);
 
 

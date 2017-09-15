@@ -163,6 +163,10 @@
       <Project>{d8d53c09-72c5-44cc-a0f0-b373b9a3ceda}</Project>
       <Name>Lupi.Data.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lupi.DependencyResolver\Lupi.DependencyResolver.csproj">
+      <Project>{906ed05f-0a8f-45ef-b08d-e30bd8f7a824}</Project>
+      <Name>Lupi.DependencyResolver</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
