@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,12 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BreedRepository.cs" />
+    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="IBreedRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lupi.Data.Entities\Lupi.Data.Entities.csproj">
       <Project>{d8d53c09-72c5-44cc-a0f0-b373b9a3ceda}</Project>
       <Name>Lupi.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lupi.DependencyResolver\Lupi.DependencyResolver.csproj">
+      <Project>{906ed05f-0a8f-45ef-b08d-e30bd8f7a824}</Project>
+      <Name>Lupi.DependencyResolver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

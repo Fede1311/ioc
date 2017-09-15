@@ -10,27 +10,27 @@ namespace Lupi.BusinessLogic
 {
     public class BreedBusinessLogic : IBreedBusinessLogic
     {
-        private BreedRepository repository;
+        private IBreedRepository breedRepository;
 
-        public BreedBusinessLogic()
+        public BreedBusinessLogic(IBreedRepository repository)
         {
-            repository = new BreedRepository();
+            breedRepository = repository;
         }
 
         public IEnumerable<Breed> Get()
         {
-            return repository.Get();
+            return breedRepository.Get();
         }
 
         public Breed Get(Guid id)
         {
-            return repository.Get(id);
+            return breedRepository.Get(id);
         }
 
         public void Add(Breed breed)
         {
             //Todo Validations
-            repository.Add(breed);
+            breedRepository.Add(breed);
         }
     }
 }

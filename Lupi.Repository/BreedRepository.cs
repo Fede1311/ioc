@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lupi.Repository
 {
-    public class BreedRepository
+    public class BreedRepository : IBreedRepository
     {
         private static List<Breed> list = new List<Breed>();
 
