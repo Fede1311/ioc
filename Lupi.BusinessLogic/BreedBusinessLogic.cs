@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lupi.BusinessLogic
 {
-    public class BreedBusinessLogic
+    public class BreedBusinessLogic : IBreedBusinessLogic
     {
         private BreedRepository repository;
 

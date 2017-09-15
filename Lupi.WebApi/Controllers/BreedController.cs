@@ -13,10 +13,11 @@ namespace Lupi.WebApi.Controllers
     [RoutePrefix("api")]
     public class BreedController : CommonApiController
     {
-        private BreedBusinessLogic businessLogic;
-        public BreedController()
+        private IBreedBusinessLogic businessLogic { get; set; }
+
+        public BreedController(IBreedBusinessLogic breedLogic)
         {
-            businessLogic = new BreedBusinessLogic();
+            businessLogic = breedLogic;
         }
 
         // GET: api/Breeds

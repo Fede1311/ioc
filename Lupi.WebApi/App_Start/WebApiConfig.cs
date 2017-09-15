@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lupi.BusinessLogic;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
@@ -12,6 +14,10 @@ namespace Lupi.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var container = new UnityContainer();
+            container.RegisterType<IBreedBusinessLogic, BreedBusinessLogic>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
+
 
             // Web API routes
             config.MapHttpAttributeRoutes();
