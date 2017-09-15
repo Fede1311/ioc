@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lupi.WebApi", "Lupi.WebApi\Lupi.WebApi.csproj", "{107BF81F-75A0-4744-A29D-C6E9D076FABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lupi.Data.Entities", "Lupi.Data.Entities\Lupi.Data.Entities.csproj", "{D8D53C09-72C5-44CC-A0F0-B373B9A3CEDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lupi.BusinessLogic", "Lupi.BusinessLogic\Lupi.BusinessLogic.csproj", "{28898325-56E1-46A9-85E1-E38BE1947303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lupi.Repository", "Lupi.Repository\Lupi.Repository.csproj", "{94F2A650-8F34-426B-9C88-AEFE8551734D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{107BF81F-75A0-4744-A29D-C6E9D076FABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107BF81F-75A0-4744-A29D-C6E9D076FABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{107BF81F-75A0-4744-A29D-C6E9D076FABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107BF81F-75A0-4744-A29D-C6E9D076FABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D53C09-72C5-44CC-A0F0-B373B9A3CEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D53C09-72C5-44CC-A0F0-B373B9A3CEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D53C09-72C5-44CC-A0F0-B373B9A3CEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D53C09-72C5-44CC-A0F0-B373B9A3CEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28898325-56E1-46A9-85E1-E38BE1947303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28898325-56E1-46A9-85E1-E38BE1947303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28898325-56E1-46A9-85E1-E38BE1947303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28898325-56E1-46A9-85E1-E38BE1947303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F2A650-8F34-426B-9C88-AEFE8551734D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F2A650-8F34-426B-9C88-AEFE8551734D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F2A650-8F34-426B-9C88-AEFE8551734D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F2A650-8F34-426B-9C88-AEFE8551734D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
