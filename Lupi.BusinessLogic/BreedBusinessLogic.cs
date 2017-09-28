@@ -27,10 +27,20 @@ namespace Lupi.BusinessLogic
             return breedRepository.Get(id);
         }
 
-        public void Add(Breed breed)
+        public Guid Add(Breed breed)
         {
             //Todo Validations
-            breedRepository.Add(breed);
+            return breedRepository.Add(breed);
+        }
+
+        public bool Update(Guid id, Breed breed)
+        {
+            return breedRepository.Update(id, breed);
+        }
+
+        public bool Delete(Guid id)
+        {
+            return breedRepository.Delete(id);
         }
     }
 }

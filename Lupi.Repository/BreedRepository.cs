@@ -25,11 +25,34 @@ namespace Lupi.Repository
             return list.Find(x => x.Id.Equals(id));
         }
 
-        public void Add(Breed breed)
+        public Guid Add(Breed breed)
         {
             breed.Id = Guid.NewGuid();
             list.Add(breed);
+            return breed.Id;
         }
-            
+
+        public bool Update(Guid id, Breed breed)
+        {
+            Breed oldBreed = Get(id);
+            if(oldBreed == null)
+            {
+                return false;
+            }
+            oldBreed.Name = breed.Name;
+            oldBreed.HairType = breed.HairType;
+            oldBreed.HairColors = breed.HairColors;
+            return true;
+        }
+
+        public bool Delete(Guid id)
+        {
+            Breed oldBreed = Get(id);
+            if (oldBreed == null)
+            {
+                return false;
+            }
+            return list.Remove(oldBreed);
+        }
     }
 }

@@ -13,6 +13,10 @@ namespace Lupi.BusinessLogic
 
         Breed Get(Guid id);
 
-        void Add(Breed breed);
+        Guid Add(Breed breed);
+
+        bool Update(Guid id, Breed breed);
+
+        bool Delete(Guid id);
     }
 }

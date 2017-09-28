@@ -23,9 +23,12 @@ namespace Lupi.WebApi.Controllers
         // GET: api/Breeds
         public IHttpActionResult Get()
         {
-
-            return Ok(businessLogic.Get());
-
+            IEnumerable<Breed> breeds = businessLogic.Get();
+            if (breeds == null)
+            {
+                return NotFound();
+            }
+            return Ok(breeds);
         }
 
         // GET: api/Breed/5
@@ -36,9 +39,45 @@ namespace Lupi.WebApi.Controllers
         }
 
         // POST: api/Breed
-        public void Post([FromBody] Breed breed)
+        public IHttpActionResult Post([FromBody] Breed breed)
         {
-            businessLogic.Add(breed);
+            try
+            {
+                Guid id = businessLogic.Add(breed);
+                return CreatedAtRoute("DefaultApi", new { id = id }, breed);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // PUT: api/Breed/5
+        public IHttpActionResult Put(Guid id, [FromBody]Breed breed)
+        {
+            try
+            {
+                bool updateResult = businessLogic.Update(id, breed);
+                return CreatedAtRoute("DefaultApi", new { updated = updateResult }, breed);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // DELETE: api/Breed/5
+        public HttpResponseMessage Delete(Guid id)
+        {
+            try
+            {
+                bool updateResult = businessLogic.Delete(id);
+                return Request.CreateResponse(HttpStatusCode.NoContent, updateResult);
+            }
+            catch (ArgumentNullException ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
         }
 
 
@@ -46,7 +85,7 @@ namespace Lupi.WebApi.Controllers
         [HttpGet]
         public IHttpActionResult Get(Guid breedId, int hairId)
         {
-            if(hairId == 1)
+            if (hairId == 1)
             {
                 return Ok("Wonderful redish color!");
             }
@@ -60,16 +99,6 @@ namespace Lupi.WebApi.Controllers
             return response;*/
 
             //return new ForbiddenResult(Request, "Because I say so");
-        }
-
-        // PUT: api/Breed/5
-        public void Put(Guid id, [FromBody]Breed breed)
-        {
-        }
-
-        // DELETE: api/Breed/5
-        public void Delete(int id)
-        {
         }
     }
 }

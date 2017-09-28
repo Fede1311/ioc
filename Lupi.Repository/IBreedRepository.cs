@@ -6,8 +6,10 @@ namespace Lupi.Repository
 {
     public interface IBreedRepository
     {
-        void Add(Breed breed);
         IEnumerable<Breed> Get();
         Breed Get(Guid id);
+        Guid Add(Breed breed);
+        bool Update(Guid id, Breed breed);
+        bool Delete(Guid id);
     }
 }
