@@ -1,0 +1,89 @@
+{
+	"variables": [],
+	"info": {
+		"name": "WebAPI DA2",
+		"_postman_id": "3efb1310-11f7-a6d1-5d26-e855aebfc16d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:25329/api/breed",
+			"request": {
+				"url": "http://localhost:25329/api/breed",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"Name\": \"A Dog\",\n \"HairType\": \"Furry\",\n \"HairColors\": ['red', 'black']\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:25329/api/breed/",
+			"request": {
+				"url": "http://localhost:25329/api/breed/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:25329/api/breed/89e58da3-37a3-4677-9c7f-b4923c0f10fc",
+			"request": {
+				"url": "http://localhost:25329/api/breed/89e58da3-37a3-4677-9c7f-b4923c0f10fc",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:25329/api/breed/56fbf1ee-ba80-468c-9af4-35366dd7a7b3",
+			"request": {
+				"url": "http://localhost:25329/api/breed/56fbf1ee-ba80-468c-9af4-35366dd7a7b3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"Name\": \"A Dog 2\",\n \"HairType\": \"Furry2\",\n \"HairColors\": ['black', 'black']\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:25329/api/breed/c91cd7d3-b29e-4364-9b6e-50e1384256b4",
+			"request": {
+				"url": "http://localhost:25329/api/breed/c91cd7d3-b29e-4364-9b6e-50e1384256b4",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
